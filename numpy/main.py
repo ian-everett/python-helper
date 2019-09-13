@@ -22,5 +22,6 @@ print('Are all numbers in col set to 1? % r' % np.all(col == 1))
 # get first row of data
 row = current_board[0, :]
 print('row %s' % row)
+print('Are all numbers in row set to 1? % r' % np.all(row == 1))
 
 redraw(current_board)
