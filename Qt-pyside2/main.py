@@ -27,7 +27,7 @@ class Bar(QQuickPaintedItem):
 if __name__ == '__main__':
     app = QGuiApplication(sys.argv)
 
-    #qmlRegisterType(Bar, 'Charts', 1, 0, 'Bar')
+    qmlRegisterType(Bar, 'Charts', 1, 0, 'Bar')
 
     view = QQuickView()
     view.setResizeMode(QQuickView.SizeRootObjectToView)
