@@ -4,13 +4,12 @@ from PySide2.QtGui import QGuiApplication, QPainter
 from PySide2.QtQml import qmlRegisterType
 from PySide2.QtQuick import QQuickPaintedItem, QQuickView
 
-class Bar (QQuickPaintedItem):
+class Bar(QQuickPaintedItem):
     def __init__(self, parent = None):
         QQuickPaintedItem.__init__(self, parent)
         timer = QTimer(self)
         timer.timeout.connect(self.hasTimedOut)
         timer.start(1000)
-
 
     def paint(self, painter):
         painter.drawRect(0, 0, 50, 50)
@@ -28,7 +27,7 @@ class Bar (QQuickPaintedItem):
 if __name__ == '__main__':
     app = QGuiApplication(sys.argv)
 
-    qmlRegisterType(Bar, 'Charts', 1, 0, 'Bar')
+    #qmlRegisterType(Bar, 'Charts', 1, 0, 'Bar')
 
     view = QQuickView()
     view.setResizeMode(QQuickView.SizeRootObjectToView)

@@ -1,28 +1,18 @@
-import Charts 1.0
 import QtQuick 2.0
 
 Item {
+    id: rootId
+
     width: 800
     height: 600
 
-    Bar {
-        id: barId
-        anchors.centerIn: parent
-        width: 100
-        height: 100
-    }
+    Rectangle {
+        id: rectId
 
-    MouseArea {
-         anchors.fill: parent
-         onClicked: barId.clearChart()
-     }
-
-    Text {
-        text: "A Bar"
-        anchors {
-            bottom: parent.bottom;
-            horizontalCenter: parent.horizontalCenter;
-            bottomMargin: 20
-        }
+        anchors.fill: parent
+        anchors.margins: 100
+        color: 'red'
+        border.width: 2
+        radius: 5
     }
 }
