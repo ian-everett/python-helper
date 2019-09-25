@@ -1,8 +1,11 @@
+'''Example of Qt PySide '''
 import sys
 import random
-from PySide2 import QtCore, QtWidgets, QtGui
+from PySide2 import QtCore, QtWidgets
+
 
 class MyWidget(QtWidgets.QWidget):
+    '''MyWidget child of QWidget'''
     def __init__(self):
         super().__init__()
 
@@ -20,10 +23,11 @@ class MyWidget(QtWidgets.QWidget):
         self.button.clicked.connect(self.magic)
 
     def magic(self):
+        '''get next random message'''
         self.text.setText(random.choice(self.hello))
 
-
-if __name__ == "__main__":
+def main():
+    '''main entry point'''
     app = QtWidgets.QApplication([])
 
     widget = MyWidget()
@@ -31,3 +35,7 @@ if __name__ == "__main__":
     widget.show()
 
     sys.exit(app.exec_())
+
+
+if __name__ == "__main__":
+    main()

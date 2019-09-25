@@ -7,14 +7,11 @@ Item {
     width: 800
     height: 600
 
- 
-
     Rectangle {
         id: rectId
 
         Bar {
-            width: 30
-            height: parent.height
+            anchors.centerIn: parent
         }
 
         anchors.fill: parent
