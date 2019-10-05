@@ -41,7 +41,7 @@ class MainWindow(QWidget):
         """
         self.count += 1
         self.label.setText(str(self.count))
-        print(self.label.text())
+        self.label.repaint()
 
 
 
