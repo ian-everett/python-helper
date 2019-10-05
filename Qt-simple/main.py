@@ -38,7 +38,9 @@ class MyWidget(QWidget):
         """
         Update text label with a randomly generated greeting message
         """
-        self.text.setText(random.choice(self.hello))
+        message = random.choice(self.hello)
+        print(message)
+        self.text.setText(message)
 
 
 def main():
