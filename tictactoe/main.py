@@ -51,4 +51,3 @@ game_board(game, display_only=True)
 game_board(game, player=1, row=0, column=0)
 game_board(game, player=1, row=1, column=1)
 game_board(game, player=1, row=2, column=2)
-
