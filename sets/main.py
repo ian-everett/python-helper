@@ -39,6 +39,13 @@ def main():
     print(set_c)
 
 
+    users = {'Bob', 'Billy', 'Adam'}
+    managers = {'Bob', 'Billy'}
+
+    # Are all the managers users
+    print(managers.issubset(users))
+
+
 
 
 if __name__ == "__main__":
