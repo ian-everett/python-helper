@@ -38,14 +38,15 @@ def main():
     print('Intersection')
     print(set_c)
 
-
+    # Test to see if all managers are users
     users = {'Bob', 'Billy', 'Adam'}
     managers = {'Bob', 'Billy'}
 
     # Are all the managers users
     print(managers.issubset(users))
 
-
+    if 'Adam' not in managers:
+        print('Adam is not a manager')
 
 
 if __name__ == "__main__":
