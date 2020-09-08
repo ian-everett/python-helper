@@ -25,7 +25,6 @@ def decode_resistor_colors(bands):
     tol = 20
     total = 0
     for i, band in enumerate(bands.split()):
-        print('band {}'.format(band))
         # Get first two digits
         if i < 2:
             total = (total * 10) + lookup[band]
@@ -40,9 +39,9 @@ def decode_resistor_colors(bands):
                 tol = 5
 
     if total >= 1000000:
-        ret = '{}M ohms, {}%'.format(total//1000000, tol)
+        ret = '{:.1g}M ohms, {}%'.format(total/1000000, tol)
     elif total >= 1000:
-        ret = '{}K ohms, {}%'.format(total/1000, tol)
+        ret = '{:.1g}k ohms, {}%'.format(total/1000, tol)
     else:
         ret = '{} ohms, {}%'.format(total, tol)
 
